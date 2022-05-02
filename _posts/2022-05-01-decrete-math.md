@@ -86,7 +86,7 @@ tags: [이산수학, 표기법, 자리표기법, 진법변환, 0의역할]     #
 여러가지 변환 방법이 존재하지만, 간단하게 10진법을 2진법으로 변환하는 방법을 살펴보고 넘어가도록 하겠다.
 
 ### 10진법 to 2진법
-![10 to 2](/assets/img/posting/decrete-math/1-zero/10to2.png){: width="50%" }
+![10 to 2](assets/img/posting/decrete-math/1-zero/10to2.png){: width="50%" }
 
 2로 더 이상 나눌 수 없을 때 까지 나눠준다.
 
@@ -108,14 +108,14 @@ tags: [이산수학, 표기법, 자리표기법, 진법변환, 0의역할]     #
 
 한 자릿수에 대해 덧셈표를 작성하면 다음과 같다.
 
-![10plus](/assets/img/posting/decrete-math/1-zero/10plus.PNG)
+![10plus](assets/img/posting/decrete-math/1-zero/10plus.PNG)
 {: width="50%" }
 
 그저 한 자릿수만 다루는 데에도 이렇게 복잡한 표가 나오게 된다. 
 
 반면, 2진법으로 스위치 신호를 2개의 상태로 덧셈표를 작성하면 다음과 같다.
 
-![2plus](/assets/img/posting/decrete-math/1-zero/2plus.PNG)
+![2plus](assets/img/posting/decrete-math/1-zero/2plus.PNG)
 {: width="30%" }
 
 10진법과 다르게 자릿수가 많아져도 복잡도는 커지지 않고, 오히려 더 많은 숫자를 표현할 수 있게 된다.
