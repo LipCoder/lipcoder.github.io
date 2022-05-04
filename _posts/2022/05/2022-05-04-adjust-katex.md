@@ -73,7 +73,7 @@ bundle install
  2. `katexmm`  liquid 태그를 이용하는 방법
 
 katex의 경우 내용을 제외한 수식부분을 liquid 태그로 감싸줘야 하는 번거로움이 있다. 
-{% end katexmm %}
+{% endkatexmm %}
 여기서는 katexmm을 이용한 방법을 설명한다. katexmm은 수식모드($, $$)로 간편하게 수식을 추가할 수 있기 때문에 굉장히 편하다. 
 
 우선 `post.html` 파일에서 내용이 추가되는 부분에 `katexmm` liquid 태그를 다음과 같이 감싸준다.
