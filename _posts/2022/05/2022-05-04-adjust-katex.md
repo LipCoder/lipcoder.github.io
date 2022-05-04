@@ -54,19 +54,14 @@ bundle install
 로컬상에 설치하여 세팅해도 되지만 여기서는 외부문서로 연결한다. 
 (로컬 설치가 궁금한 사람들은 [해당링크](https://github.com/KaTeX/KaTeX)를 참조하자.)
 
-`head.html` 파일에서 포스팅 시 적용되는 블록에 다음 내용을 추가한다.
+`head.html` 파일에서 포스팅 시 적용되는 블록을 찾는다. 
+
+![head](/assets/img/posting/adjust-katex/head.png){:width="100%"}
+
+그리고 다음 내용을 추가한다. 
 ```html
-{% if page.layout == 'page' or page.layout == 'post' %}
-	
-	<!-- Manific Popup(기존 내용) -->
-	<link  rel="stylesheet"  href="{{ 	site.data.assets[origin].magnific-popup.css }}">
-	
-	<!-- 추가하는 부분 -->
-	<!-- KaTeX CSS -->
-	<link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"  crossorigin="anonymous">
-	<!-- 추가하는 부분 end -->
-	
-{% endif %}
+<!-- KaTeX CSS -->
+<link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"  crossorigin="anonymous">
 ``` 
 <br>
 <br>
@@ -81,13 +76,9 @@ katex의 경우 내용을 제외한 수식부분을 liquid 태그로 감싸줘�
 여기서는 katexmm을 이용한 방법을 설명한다. katexmm은 수식모드(\$, \$\$)로 간편하게 수식을 추가할 수 있기 때문에 굉장히 편하다. 
 
 우선 `post.html` 파일에서 내용이 추가되는 부분에 `katexmm` liquid 태그를 다음과 같이 감싸준다.
-```html
-{% katexmm %} <!-- 추가! -->
-<div  class="post-content">
-{{ content }}
-</div>
-{% endkatexmm %} <!-- 추가! -->
-```
+
+![katexmm](/assets/img/posting/adjust-katex/katexmm.png){:width="100%"}
+
 이제 수식모드를 사용하면 포스팅시 멋진 수식으로 변환되는 것을 볼 수 있을 것이다.
 <br>
 
