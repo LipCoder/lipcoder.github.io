@@ -14,6 +14,7 @@ tags: [github, 블로그, jekyll, chirpy, mac, macOS]     # TAG names should alw
 나 또한 블로그 처음 만들때 하루 종일 걸렸던 기억이 있다. 본인처럼 고통받는 사람이 더 이상 없기를 하는 마음에서 포스팅을 작성한다.
 <br>
 <br>
+<br>
 
 ## 2. 사전 환경
 ---
@@ -27,6 +28,7 @@ tags: [github, 블로그, jekyll, chirpy, mac, macOS]     # TAG names should alw
  - Visual Studio Code
 <br>
 <br>
+<br>
 
 ## 3. Jekyll 환경 설치 및 세팅
 ---
@@ -37,6 +39,7 @@ tags: [github, 블로그, jekyll, chirpy, mac, macOS]     # TAG names should alw
 ```bash
 xcode-select --install
 ```
+<br>
 <br>
 
 ###  3-2. 루비 설치
@@ -79,6 +82,7 @@ ruby -v
 ruby 2.6.3p62 (2019-04-16 revision 67580) 
 ```
 <br>
+<br>
 
 ### 3-3. Jekyll 설치
 이제 gem을 이용해 Jekyll에 필요한 프로그램들을 설치한다.
@@ -102,6 +106,7 @@ source ~/.bash_profile
 gem env
 ```
  `GEM PATHS:` 가 홈 디렉토리 내 경로를 가리키고 있는지 확인한다.
+ <br>
  <br>
  <br>
 
@@ -319,6 +324,7 @@ github 저장소에 가보면, `Actions` 라는 상단 탭이 있다. 이를 클
 
 ### 5-6. 서비스용 브랜치 변경하기
 저장소에서 `Settings > Pages`탭으로 이동하면, 브렌치 설정을 할 수 있는데 여기서 브렌치를 `gh-pages`로 변경한 후 `Save` 버튼을 클릭한다. 
+<br>
 <br>
 <br>
 
