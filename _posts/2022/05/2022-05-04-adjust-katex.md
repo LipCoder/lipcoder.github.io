@@ -16,7 +16,7 @@ Katex는 웹 상에 수식 표기를 해주는 라이브러리 중 하나이다.
 해당 [링크](https://katex.org/docs/supported.html)를 통해 Katex의 전반적인 문법을 한눈에 살펴볼 수 있다.  
 
 Katex는 엄연히 라이브러리이기 때문에 적용법을 알아야 한다.
-여기서는 Jekyll에서 Katex를 적용하는 방법에 대해서 알아보고자 한다. 
+여기서는 Jekyll에서 Katex를 적용하는 방법에 대해서 알아보고자 한다.  
 (Chirpy 테마를 기준으로 설명하기 때문에 다른 테마는 적용법이 다를 수 있음을 참고하자.)
 <br>
 <br>
@@ -38,7 +38,7 @@ plugins:
 `Gemfile` 루비 파일에서 플러그인 블록에 jekyll-katex를 추가한다. 
 ```ruby
 group :jekyll_plugins do
-    gem 'jekyll-katex'
+  gem 'jekyll-katex'
 end
 ```
 
@@ -88,7 +88,7 @@ katex의 경우 수식부분만 liquid 태그로 감싸줘야 하는 번거로�
 <br>
 
 ### $$(Katex Display 모드) 적용 문제 해결
-$는 잘 되는데 $$가 수식으로 적용되지 않는다면, Katex가 아닌 Jekyll 자체에서  에 대해 수식 변환을 시도하는 것이 원인일 수 있다.   
+$는 잘 되는데 $$가 수식으로 적용되지 않는다면, Katex가 아닌 Jekyll 자체에서 $$에 대해 수식 변환을 시도하는 것이 원인일 수 있다.
 (<https://github.com/linjer/jekyll-katex/issues/29>)
 
 이런 경우 `_config.yml`파일에 다음 내용을 추가하면 해결 할 수 있다.
@@ -99,4 +99,3 @@ kramdown:
 ```
 <br>
 <br>
-
