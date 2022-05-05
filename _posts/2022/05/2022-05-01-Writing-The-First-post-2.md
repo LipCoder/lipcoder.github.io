@@ -5,6 +5,7 @@ categories: [TEST_CATEGORIE, TEST_SUB_CATEGORIE]
 tags: [TAG, TEST]     # TAG names should always be lowercase
 ---
 
+{% katexmm %}
 ## 센다는 것
 --- 
 우리는 일상에서 여러가지를 '수를 센다'.
@@ -316,4 +317,5 @@ $$  \quad\quad\ = 5 \times 4 \times 3 $$
 <br>
 
 ## 조합 
---- 
+---
+{% endkatexmm %}

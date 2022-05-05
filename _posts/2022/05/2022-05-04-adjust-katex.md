@@ -31,14 +31,14 @@ Katex 라이브러리를 위한 Jekyll 플러그인을 적용해보자.
 ```yaml
 # 추가 플러그인
 plugins:
-	- jekyll-katex
+  - jekyll-katex
 ```
 
 ##### Gemfile 수정
 `Gemfile` 루비 파일에서 플러그인 블록에 jekyll-katex를 추가한다. 
 ```ruby
 group :jekyll_plugins do
-	gem 'jekyll-katex'
+    gem 'jekyll-katex'
 end
 ```
 
@@ -51,7 +51,7 @@ bundle install
 
 ##### Katex 스타일 추가
 이제 Katex용 CSS 파일과 폰트를 추가한다.
-로컬상에 설치하여 세팅해도 되지만 여기서는 외부문서로 연결한다. 
+로컬상에 설치하여 세팅해도 되지만 여기서는 외부문서로 연결한다.  
 (로컬 설치가 궁금한 사람들은 [해당링크](https://github.com/KaTeX/KaTeX)를 참조하자.)
 
 `head.html` 파일에서 포스팅 시 적용되는 블록을 찾는다. 
@@ -72,25 +72,23 @@ bundle install
  1. `katex` liquid 태그를 이용하는 방법
  2. `katexmm`  liquid 태그를 이용하는 방법
 
-katex의 경우 내용을 제외한 수식부분을 liquid 태그로 감싸줘야 하는 번거로움이 있다. 
-여기서는 katexmm을 이용한 방법을 설명한다. katexmm은 수식모드(\$, \$\$)로 간편하게 수식을 추가할 수 있기 때문에 굉장히 편하다. 
+katex의 경우 수식부분만 liquid 태그로 감싸줘야 하는 번거로움이 있다. 수식을 제외한 나머지 내용들도 모두 수식화 되어버리기 때문이다.  
+여기서는 katexmm을 이용한 방법을 설명한다. katexmm은 liquid 태그만 한번 감싸주면 수식모드( $, $$ )로 간편하게 수식을 추가할 수 있기 때문에 굉장히 편하다. 수식이 필요한 포스팅의 경우 마크다운 파일의 양끝을 liquid 태그로 감싸면 된다. 
 
-우선 `post.html` 파일에서 내용이 추가되는 부분에 `katexmm` liquid 태그를 다음과 같이 감싸준다.
+![katexmm](/assets/img/posting/adjust-katex/katexmm.png){:width="60%"}
 
-![katexmm](/assets/img/posting/adjust-katex/katexmm.png){:width="100%"}
-
-이제 수식모드를 사용하면 포스팅시 멋진 수식으로 변환되는 것을 볼 수 있을 것이다.
+위와 같이 중간에 수식모드를 사용하면 포스팅시 멋진 수식으로 변환되는 것을 볼 수 있을 것이다.
 <br>
 
 ##### 주의사항
-여기서 주의해야 할 점이 있는데 포스팅 내용은 항상 `katexmm` liquid 태그로 감싸져 있으므로,  수식 표현이 아닌 일반적인 **\$** 문자를 사용하면 ** katex가 올바른 수식으로 인식하지 못하여 오류**가 생길 수 있다.
+여기서 주의해야 할 점이 있는데 `katexmm` liquid 태그로 감싸져 있는 경우, $ 문자를 사용할때 빌드 에러가 생기거나, 포스팅 내용이 의도하지 않게 수식화 되는 문제가 있다.
 
-때문에 **\$** 문자를 사용하고 싶은 경우 항상 `123123` 로 써줘야 한다.  
+그렇기 때문에 때문에 $ 문자를 사용하고 싶은 경우에는 `katexmm` liquid 태그 외부에 작성해야 한다.  
 <br>
 <br>
 
-### \$\$(Katex Display 모드) 적용 문제 해결
-\$는 잘 되는데  \$\$가 수식으로 적용되지 않는다면, Katex가 아닌 Jekyll 자체에서  \$\$에 대해 수식 변환을 시도하는 것이 원인일 수 있다. 
+### $$(Katex Display 모드) 적용 문제 해결
+$는 잘 되는데 $$가 수식으로 적용되지 않는다면, Katex가 아닌 Jekyll 자체에서  에 대해 수식 변환을 시도하는 것이 원인일 수 있다.   
 (<https://github.com/linjer/jekyll-katex/issues/29>)
 
 이런 경우 `_config.yml`파일에 다음 내용을 추가하면 해결 할 수 있다.
